@@ -1,0 +1,15 @@
+{
+  "buildCommand": "pnpm --filter @workspace/api-server build && pnpm --filter @workspace/cidade-aberta build",
+  "outputDirectory": "artifacts/cidade-aberta/dist/public",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "functions": {
+    "api/index.ts": {
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
