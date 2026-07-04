@@ -1,7 +1,7 @@
 {
   "buildCommand": "pnpm --filter @workspace/api-server build && pnpm --filter @workspace/cidade-aberta build",
   "outputDirectory": "artifacts/cidade-aberta/dist/public",
-  "installCommand": "npx pnpm@8 install --no-frozen-lockfile",
+  "installCommand": "pnpm install --no-frozen-lockfile",
   "functions": {
     "api/index.ts": {
       "memory": 1024,
